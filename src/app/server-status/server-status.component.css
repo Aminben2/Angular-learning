@@ -1,0 +1,32 @@
+/* Styles for the server status component */
+p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+@keyframes colorChange {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.online .theOne {
+  color: green;
+  animation: colorChange 2s infinite;
+}
+
+.offline .theOne {
+  color: red;
+  animation: colorChange 2s infinite;
+}
+
+.unknown .theOne {
+  color: orange;
+  animation: colorChange 2s infinite;
+}

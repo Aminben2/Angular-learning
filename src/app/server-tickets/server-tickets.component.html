@@ -1,0 +1,22 @@
+<app-dashboard-item-wrapper
+  titile="Support Tickets"
+  imageAlt="A list of items"
+  imageSrc="list.png"
+>
+  <div id="tickets-management">
+    <div id="tickets">
+      <ul>
+        @for (ticket of tickets ; track ticket.id) {
+        <li>
+          <app-ticket [ticket]="ticket"></app-ticket>
+        </li>
+        } @empty {
+        <p>There are no tickets!</p>
+        }
+      </ul>
+    </div>
+    <div id="new-ticket">
+      <app-new-ticket></app-new-ticket>
+    </div>
+  </div>
+</app-dashboard-item-wrapper>
